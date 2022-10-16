@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenobot commands</title>
+
+    <link rel="stylesheet" href="style.scss" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    #intro-example {
+      height: 400px;
+    }
+
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 600px;
+      }
+    }
+  </style>
+  <body style="background-color: #292a2e">
+    <nav
+      class="navbar navbar-expand-lg fixed-top text-white navbar-dark"
+      style="background-color: #202024"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            id="MDB-logo"
+            src="/images/ZENO-LOGO_LG.png"
+            alt="MDB Logo"
+            draggable="false"
+            height="50"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="index.html"
+                ><i class="fas fa-home pe-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="https://discord.gg/kG4ypGRmXM"
+                ><i class="fas fa-headset pe-2"></i>Support</a
+              >
+            </li>
+            <li class="nav-item ms-3">
+              <a
+                class="btn btn-primary btn-rounded"
+                href="https://discord.com/api/oauth2/authorize?client_id=998869862237622272&permissions=1513775164646&redirect_uri=https%3A%2F%2Fdiscord.gg%2FUDWW5xucGc&response_type=code&scope=bot%20applications.commands%20guilds.join"
+                >Invite Bot</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div
+      class="rounded-5 shadow-5"
+      style="
+        background-color: #202024;
+        align-self: center;
+        margin: 25px;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+      "
+    >
+      <h1 class="text-center text-white p-3" style="margin-bottom: 0px;">Command Info</h1>
+      <p class="text-center h5 text-white">
+        Prefix: <code>/</code>
+        <br>
+        <code>{}</code> - Required Option 
+        <br>
+        <code>()</code> - Optional Option 
+      </p>
+    </div>
+
+    <div
+      class="rounded-5 shadow-5"
+      style="
+        background-color: #202024;
+        align-self: center;
+        margin: 25px;
+        margin-bottom: 0px;
+      "
+    >
+      <h1 class="text-center text-white p-3">Utility Commands</h1>
+    </div>
+    <div
+      class="accordion accordion-borderless shadow-5"
+      id="accordionFlushExampleX"
+      style="margin-left: 25px; margin-right: 25px"
+    >
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-headingOneX">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseOneX"
+            aria-expanded="true"
+            aria-controls="flush-collapseOneX"
+          >
+            getAvatar Command
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOneX"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-headingOneX"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            getAvatar is used to get the avatar of a selected user
+            <br />
+            <br />
+            Usage: <code>/getAvatar {user} </code>
+            <br />
+            Permissions: <span class="badge badge-success">everyone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header text-white" id="flush-headingTwoX">
+          <button
+            class="accordion-button collapsed text-white"
+            type="button"
+            style="background-color: #202024"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseTwoX"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwoX"
+          >
+            Help Command
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwoX"
+          class="accordion-collapse collapse text-white"
+          aria-labelledby="flush-headingTwoX"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Get an embed that you can select the category you want to get the
+            commands from!
+            <br />
+            <br />
+            Usage: <code>/help</code>
+            <br />
+            Permissions: <span class="badge badge-success">everyone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-headingThreeX">
+          <button
+            class="accordion-button collapsed text-white"
+            type="button"
+            style="background-color: #202024"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseThreeX"
+            aria-expanded="false"
+            aria-controls="flush-collapseThreeX"
+          >
+            serverInfo Command
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThreeX"
+          class="accordion-collapse collapse text-white"
+          aria-labelledby="flush-headingThreeX"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Get the info of the server you are in! Get server member count, role
+            count, and more!
+            <br />
+            <br />
+            Usage: <code>/serverInfo</code>
+            <br />
+            Permissions: <span class="badge badge-success">everyone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-h4">
+          <button
+            class="accordion-button collapsed text-white"
+            type="button"
+            style="background-color: #202024"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-coll4"
+            aria-expanded="false"
+            aria-controls="flush-coll4"
+          >
+            userInfo Command
+          </button>
+        </h2>
+        <div
+          id="flush-coll4"
+          class="accordion-collapse collapse text-white"
+          aria-labelledby="flush-h4"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Get the info of the user you selected or yourself! Get banner link,
+            avatar link, role count, roles and more!
+            <br />
+            <br />
+            Usage: <code>/userInfo (user) </code>
+            <br />
+            Permissions: <span class="badge badge-success">everyone</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="rounded-5 shadow-5"
+      style="
+        background-color: #202024;
+        align-self: center;
+        margin: 25px;
+        margin-bottom: 0px;
+      "
+    >
+      <h1 class="text-center text-white rounded-5 p-3">Moderation Commands</h1>
+    </div>
+
+    <div
+      class="accordion accordion-borderless shadow-5"
+      id="accordionFlushExampleX"
+      style="margin-left: 25px; margin-right: 25px"
+    >
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod1">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd1"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd1"
+          >
+            addRole Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd1"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod1"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            You can use addRole to add roles to a user, the user must be a lower
+            rank than you. You cannot add roles to members above you!
+            <br />
+            <br />
+            Usage: <code>/addRole {role} {user} </code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod2">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd2"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd2"
+          >
+            removeRole Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd2"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod2"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Just like the addRole command but removes the role from the user,
+            same rules apply.
+            <br />
+            <br />
+            Usage: <code>/removeRole {role} {user} </code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod3">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd3"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd3"
+          >
+            Announce Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd3"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod3"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Allows you to send an embed in a selected channel, you can also
+            select if you want to mention @everyone!
+            <br />
+            <br />
+            Usage:
+            <code
+              >/announce {channel} {title} {description} {mention} {color}
+            </code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="accordion-item"
+        style="background-color: #202024"
+        id="logs-cmd"
+      >
+        <h2 class="accordion-header" id="flush-mod4">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd4"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd4"
+          >
+            logs Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd4"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod4"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Used to display the logs from a user.
+            <br />
+            <br />
+            Usage: <code>/logs {warns/notes} {user} </code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod5">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd5"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd5"
+          >
+            mod Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd5"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod5"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            All moderation commands compressed into one! You can ban, kick, and
+            timeout users using this single command! You can also set modlogs
+            too to track the usage of this command.
+            <br />
+            <br />
+            Usage: <code>/mod {ban/kick/timeout} {user} (time) (reason)</code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod6">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd6"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd6"
+          >
+            modlogs Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd6"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod6"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Used to setup, delete, or replace the modlogs channel!
+            <br />
+            <br />
+            Usage:
+            <code>/modlogs {setup/delete/replace_channel} {channel}</code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod7">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd7"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd7"
+          >
+            mute Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd7"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod7"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            Mute a user by giving them a role temporarily until the time you
+            selected.
+            <br />
+            <br />
+            Usage:
+            <code>/mute {user} {time} (reason)</code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod8">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd8"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd8"
+          >
+            note Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd8"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod8"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            add a note to a user, the note can be later accessed using the /logs
+            command!
+            <br />
+            <br />
+            Usage #1:
+            <code>/logs add {user} {note}</code>
+            <br />
+            Usage #2: <code>/logs edit {id} {new_note}</code>
+            <br />
+            Usage #3: <code>/logs remove {id}</code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod8">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd8"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd8"
+          >
+            warn Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd8"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod8"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            warn a user by adding a message to their logs and sending them a dm,
+            the logs can be later accessed by doing /logs!
+            <br />
+            <br />
+            Usage #1:
+            <code>/warn add {user} (reason)</code>
+            <br />
+            Usage #2: <code>/warn remove {id}</code>
+            <br />
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-mod9">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-mod-cmd9"
+            aria-expanded="true"
+            aria-controls="flush-mod-cmd9"
+          >
+            slowMode Command
+          </button>
+        </h2>
+        <div
+          id="flush-mod-cmd9"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-mod9"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            add a slowmode to the channel you are in.
+            <br />
+            <br />
+            Usage:
+            <code>/slowmode {duration}</code>
+            Permissions: <span class="badge badge-danger">moderators</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="rounded-5 shadow-5"
+      style="
+        background-color: #202024;
+        align-self: center;
+        margin: 25px;
+        margin-bottom: 0px;
+      "
+    >
+      <h1 class="text-center text-white rounded-5 p-3">Systems</h1>
+    </div>
+
+    <div
+      class="accordion accordion-borderless shadow-5"
+      id="accordionFlushExampleX"
+      style="margin-left: 25px; margin-right: 25px"
+    >
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-systems-1">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-sys-1"
+            aria-expanded="true"
+            aria-controls="flush-sys-1"
+          >
+            Tickets System
+          </button>
+        </h2>
+        <div
+          id="flush-sys-1"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-systems-1"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            This system creates a ticket system that is customizable which your
+            users can get support by your support team. This command can greatly
+            improve productivity in your server!
+            <br />
+            <br />
+            Setup:
+            <code
+              >/tickets setup {channel} {category} {support-role} {ticket-logs}
+            </code>
+            <br />
+            Delete: <code>/tickets delete</code>
+            <br />
+            Permissions: <span class="badge badge-danger">admins</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-systems-2">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-sys-2"
+            aria-expanded="true"
+            aria-controls="flush-sys-2"
+          >
+            Suggestions System
+          </button>
+        </h2>
+        <div
+          id="flush-sys-2"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-systems-2"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            This system creates a suggestion system that could help you find the
+            perfect addition by your community!
+            <br />
+            <br />
+            Setup: <code>/suggestions setup {channel} </code> --
+            <span class="badge badge-danger">admins</span>
+            <br />
+            Suggest: <code>/suggestions suggest {suggestion}</code> --
+            <span class="badge badge-success">everyone</span>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" style="background-color: #202024">
+        <h2 class="accordion-header" id="flush-systems-3">
+          <button
+            class="accordion-button text-white"
+            style="background-color: #202024"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-sys-3"
+            aria-expanded="true"
+            aria-controls="flush-sys-3"
+          >
+            Event System (Welcome & Leave)
+          </button>
+        </h2>
+        <div
+          id="flush-sys-3"
+          class="accordion-collapse collapse text-white"
+          style="background-color: #202024"
+          aria-labelledby="flush-systems-3"
+          data-mdb-parent="#accordionFlushExampleX"
+        >
+          <div class="accordion-body">
+            This system sets up the welcome and leave events allowing you to
+            better track who entered and who left your server!
+            <br />
+            <br />
+            <h4 style="margin: 0px">Welcome Events</h4>
+            Setup:
+            <code
+              >/events welcome {channel} {enable} {chat} {rules} {mention-user}
+              (welcome-image)
+            </code>
+            <br />
+            <br />
+            <h4 style="margin: 0px">Leave Events</h4>
+            Setup: <code>/events leave {channel} {enable} </code>
+            <br />
+            Permissions: <span class="badge badge-danger">admins</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="text-center text-white"
+      style="background-color: #202024; margin-top: 25px"
+    >
+      <div class="container p-4 pb-0">
+        <section class="mb-4">
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://twitter.com/lunartaku"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://instagram.com/lunartaku"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://github.com/lunartaku"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: #202024">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">zenobot</a>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MDB JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+  </body>
+</html>
